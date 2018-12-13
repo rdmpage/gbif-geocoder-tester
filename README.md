@@ -53,6 +53,6 @@ Data from table 1, localities, latitude and longitude, and accessions. Manually 
 
 Cardoso, S. D., Serique, K. J., Amanqui, F. K., Santos, J. L. C. D., & Moreira, D. A. (2014). A Gazetteer for Biodiversity Data as a Linked Open Data Solution. 2014 IEEE 23rd International WETICE Conference. doi:10.1109/wetice.2014.19
 
-
 Gritta, M., Pilehvar, M. T., Limsopatham, N., & Collier, N. (2017). What’s missing in geographical parsing? Language Resources and Evaluation, 52(2), 603–623. doi:10.1007/s10579-017-9385-8
 
+Jurgens, D., Finethy, T., McCorriston, J., Xu, Y.T., & Ruths, D. (2015). Geolocation Prediction in Twitter Using Social Networks: A Critical Analysis and Review of Current Practice. ICWSM. https://www.semanticscholar.org/paper/Geolocation-Prediction-in-Twitter-Using-Social-A-of-Jurgens-Finethy/36aa70f51eb36b7b9dea27c3c84b96c85471ab22
