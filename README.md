@@ -7,7 +7,7 @@ See [Geocoding genomic databases using GBIF](https://www.biorxiv.org/content/ear
 
 ## Idea
 
-Test whether GBIF Geocoding works (https://lyrical-money.glitch.me)
+Test whether GBIF Geocoding works, see https://lyrical-money.glitch.me for geocoder, and [GBIF](https://gbif.org) for information on GBIF.
 
 Test using sequences because (a) we want to geocode as many sequences as possible, and (b) if we use recent sequences the specimens are unlikely to be in GBIF already and so make a stronger test.
 
@@ -105,10 +105,22 @@ Zhou, Y., Wang, S., Zhu, H., Li, P., Yang, B., & Ma, J. (2017). Phylogeny and bi
 Data from table 1, localities, latitude and longitude, and accessions. Manually converted to Excel and CSV.
 
 
+### Examples
+
+Processid | taxon | country_reg | province_reg | site 
+--|--|--|--|--|--
+AMNHI193-10 | Leptocypris modestus |Democratic Republic of the Congo |Kinshasa | Nsele River, near `Kisangani Village` just below r
+AMNHI168-10 | Brachyalestes comptus|Democratic Republic of the Congo | Bas-Congo | Flat rock outcrop near Luozi. Cast net and seine o
+
+AMNHI193-10 https://lyrical-money.glitch.me/search?q=Kinshasa%20Nsele%20River%2C%20near%20%60Kisangani%20Village%60%20just%20below%20r finds one GBIF record https://gbif.org/occurrence/1413932539 (iBOL, ironically)
+
+
 ## References
 
-Cardoso, S. D., Serique, K. J., Amanqui, F. K., Santos, J. L. C. D., & Moreira, D. A. (2014). A Gazetteer for Biodiversity Data as a Linked Open Data Solution. 2014 IEEE 23rd International WETICE Conference. doi:10.1109/wetice.2014.19
+Cardoso, S. D., Serique, K. J., Amanqui, F. K., Santos, J. L. C. D., & Moreira, D. A. (2014). A Gazetteer for Biodiversity Data as a Linked Open Data Solution. 2014 IEEE 23rd International WETICE Conference. https://doi.org/10.1109/wetice.2014.19
 
-Gritta, M., Pilehvar, M. T., Limsopatham, N., & Collier, N. (2017). What’s missing in geographical parsing? Language Resources and Evaluation, 52(2), 603–623. doi:10.1007/s10579-017-9385-8
+Gritta, M., Pilehvar, M. T., Limsopatham, N., & Collier, N. (2017). What’s missing in geographical parsing? Language Resources and Evaluation, 52(2), 603–623. https://doi.org/10.1007/s10579-017-9385-8
 
 Jurgens, D., Finethy, T., McCorriston, J., Xu, Y.T., & Ruths, D. (2015). Geolocation Prediction in Twitter Using Social Networks: A Critical Analysis and Review of Current Practice. ICWSM. https://www.semanticscholar.org/paper/Geolocation-Prediction-in-Twitter-Using-Social-A-of-Jurgens-Finethy/36aa70f51eb36b7b9dea27c3c84b96c85471ab22
+
+Miraldo, A., Li, S., Borregaard, M. K., Florez-Rodriguez, A., Gopalakrishnan, S., Rizvanovic, M., … Nogues-Bravo, D. (2016, September 29). An Anthropocene map of genetic diversity. Science. American Association for the Advancement of Science (AAAS). https://doi.org/10.1126/science.aaf4381

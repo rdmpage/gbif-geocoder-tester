@@ -177,9 +177,8 @@ $filename = 'test.tsv';
 $delimiter = "\t";
 
 
-$filename = 'DQ523091/table-2.csv';
-
-$delimiter = ",";
+//$filename = 'DQ523091/table-2.csv';
+//$delimiter = ",";
 
 $file = @fopen($filename, "r") or die("couldn't open $filename");		
 $file_handle = fopen($filename, "r");
@@ -275,6 +274,20 @@ foreach ($data as $item)
 		// OK, how shall we compute the score...?
 		
 		// 1. Compute distance
+		
+		$hits = array();
+		
+		// for current result structure
+		foreach ($obj->features as $feature)
+		{
+			if ($feature->geometry->type == 'Point')
+			{
+				$hits[]  = $feature->geometry->coordinates;
+			}
+		
+		}
+		
+		print_r($hits);
 		
 		
 	}
