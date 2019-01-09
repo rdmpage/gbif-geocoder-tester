@@ -174,6 +174,7 @@ $header = array();
 $header_lookup = array();
 
 $filename = 'test.tsv';
+$filename = 'bat.tsv';
 $delimiter = "\t";
 
 
@@ -190,7 +191,15 @@ while (!feof($file_handle))
 		$delimiter
 		);
 
+	
+
 	$go = is_array($row);
+	
+	// handle empty rows at end of file
+	if ($go && count($row) == 1)
+	{
+		$go = false;
+	}
 				
 	if ($go && ($row_count == 0))
 	{
@@ -218,7 +227,7 @@ while (!feof($file_handle))
 		}
 		
 		
-		// post process
+		// process table
 		
 		// assume we have standard headers
 		
@@ -269,7 +278,7 @@ foreach ($data as $item)
 	{
 		$obj = json_decode($json);
 		
-		print_r($obj);
+		//print_r($obj);
 		
 		// OK, how shall we compute the score...?
 		
@@ -282,12 +291,55 @@ foreach ($data as $item)
 		{
 			if ($feature->geometry->type == 'Point')
 			{
-				$hits[]  = $feature->geometry->coordinates;
+				$hit = new stdclass;
+				$hit->pt = $feature->geometry->coordinates;
+				$hit->score = $feature->properties->d;
+				$hit->hit_string = $feature->properties->hit_string;
+				$hit->query_string = $feature->properties->query_string;
+			
+				$hits[]  = $hit;
 			}
 		
 		}
 		
-		print_r($hits);
+		//print_r($hits);
+		
+		// 2. Sort in reverse order by best score
+		usort($hits, function($a, $b) {
+    		return $b->score - $a->score;
+		});
+		
+		//print_r($hits);
+		
+		// 3. Compute distance from query
+		$delta = array();
+		foreach ($hits as $hit)
+		{
+			echo $hit->query_string . "\n";
+			echo $hit->hit_string . "\n";
+			print_r($hit->pt);
+			print_r(array($item->decimalLongitude, $item->decimalLatitude));
+		
+		
+			$delta[] = distance(
+				$hit->pt[1], 
+				$hit->pt[0], 
+			
+				$item->decimalLatitude, 
+				$item->decimalLongitude,
+				
+				'K'
+				
+				);
+				
+				
+		
+		
+		}
+		
+		print_r($delta);
+		
+		
 		
 		
 	}
