@@ -29,6 +29,13 @@ Given localities with known coordinates, can geocoder match those with reasonabl
 
 Take example data, e.g. sequences (maybe DNA barcodes), geocode, then add to GBIF.
 
+### Matching text strings, specimens, etc. (separate problem)
+
+### Outputs
+
+- add new datasets to GBIF
+- demonstrate before and after improvements for species
+
 
 
 ## Need to be able to measure performance
